@@ -1,12 +1,12 @@
 <?php
-
+#[AllowDynamicProperties]
 class Crud extends CI_Controller
 {
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->database();
-		$this->load->model('Crud_model');
+		$this->load->model('crud_model');
 		$this->load->helper('url');
 	}
 
