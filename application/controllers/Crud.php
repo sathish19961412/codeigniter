@@ -26,6 +26,11 @@ class Crud extends CI_Controller
 			}
 		}
 	}
+
+	public function displaydata(){
+		$result['data']=$this->crud_model->display_records();
+		$this->load->view('display_records',$result);
+	}
 }
 
 ?>
