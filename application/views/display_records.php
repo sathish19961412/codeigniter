@@ -13,6 +13,7 @@
 				<th>firstname</th>
 				<th>lastname</th>
 				<th>email</th>
+				<th>Update</th>
 			</tr>
 				<?php
 				$i=1;
@@ -23,6 +24,7 @@
 					echo '<td>'.$row->first_name.'</td>';
 					echo '<td>'.$row->last_name.'</td>';
 					echo '<td>'.$row->email.'</td>';
+					echo '<td><a href="updatedata?id='.$row->id.'">Update</a></td>';
 					echo '</tr>';
 					$i++;
 				}

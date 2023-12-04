@@ -7,10 +7,10 @@
 	</head>
 	<body>
 		<form method="post" action="<?=base_url()?>Crud/savedata">
-		<input type="text" name="first_name" placeholder="firstname">
-		<input type="text" name="last_name" placeholder="lastname">
-		<input type="email" name="email" placeholder="email">
-		<input type="submit" name="save" value="Save">
+			<input type="text" name="first_name" placeholder="firstname"><br>
+			<input type="text" name="last_name" placeholder="lastname"><br>
+			<input type="email" name="email" placeholder="email"><br>
+			<input type="submit" name="save" value="Save">
 		</form>
 	</body>
 </html>

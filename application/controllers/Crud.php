@@ -31,6 +31,20 @@ class Crud extends CI_Controller
 		$result['data']=$this->crud_model->display_records();
 		$this->load->view('display_records',$result);
 	}
+
+	public function updatedata(){
+		$id=$this->input->get('id');
+		$result['data']=$this->crud_model->displayrecordsById($id);
+		$this->load->view('update_records',$result);
+		if($this->input->post('update'))
+		{
+			$first_name=$this->input->post('first_name');
+			$last_name=$this->input->post('last_name');
+			$email=$this->input->post('email');
+			$this->crud_model->update_records($first_name,$last_name,$email,$id);
+			echo'Data Updated Successfully';
+		}
+	}
 }
 
 ?>
