@@ -23,6 +23,13 @@ class Crud_model extends CI_Model
 	{
 		$this->db->query("update crud SET first_name='$first_name',last_name='$last_name',email='$email' where id='".$id."'");
 	}
+
+	public function deleteRecordById($id)
+	{
+		$this->db->where('id',$id);
+		$this->db->delete('crud');
+		return true;
+	}
 }
 
 ?>

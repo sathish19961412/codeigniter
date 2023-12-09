@@ -45,6 +45,18 @@ class Crud extends CI_Controller
 			echo'Data Updated Successfully';
 		}
 	}
+
+	public function deletedata(){
+		$id=$this->input->get('id');
+		$response=$this->crud_model->deleteRecordById($id);
+		if($response==true)
+		{
+			echo "Deleted Succesfully";
+		}
+		else{
+			echo "Deleted Succesfully";
+		}
+	}
 }
 
 ?>
